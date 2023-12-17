@@ -19,7 +19,7 @@ export const items = [
     ),
   },
   {
-    title: "Pollsters",
+    title: "Surveyor",
     path: "/pollsters",
     icon: (
       <SvgIcon fontSize="small">

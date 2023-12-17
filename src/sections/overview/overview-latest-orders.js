@@ -36,7 +36,7 @@ export const OverviewLatestOrders = (props) => {
             <TableHead>
               <TableRow>
                 <TableCell>Area</TableCell>
-                <TableCell>Pollster</TableCell>
+                <TableCell>Surveyor</TableCell>
                 <TableCell sortDirection="desc">Date</TableCell>
                 <TableCell>Status</TableCell>
               </TableRow>
