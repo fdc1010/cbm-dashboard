@@ -27,9 +27,6 @@ export const CompanyCard = (props) => {
         <Typography align="center" gutterBottom variant="h5">
           {company.title}
         </Typography>
-        <Typography align="center" variant="body1">
-          {company.description}
-        </Typography>
       </CardContent>
       <Box sx={{ flexGrow: 1 }} />
       <Divider />

@@ -28,9 +28,9 @@ const areas = [
   {
     id: "ed2b900870ceba72d203ec15",
     createdAt: "31/03/2019",
-    description: "lahug",
+    description: "Lahug",
     logo: "/assets/logos/logo-medium.png",
-    title: "lahug",
+    title: "Lahug",
     downloads: "625",
   },
   {
@@ -70,7 +70,7 @@ const areas = [
 const Page = () => (
   <>
     <Head>
-      <title>Areas | CBM</title>
+      <title>Area | CBM</title>
     </Head>
     <Box
       component="main"
@@ -83,7 +83,7 @@ const Page = () => (
         <Stack spacing={3}>
           <Stack direction="row" justifyContent="space-between" spacing={4}>
             <Stack spacing={1}>
-              <Typography variant="h4">Areas</Typography>
+              <Typography variant="h4">Area</Typography>
               <Stack alignItems="center" direction="row" spacing={1}>
                 <Button
                   color="inherit"
