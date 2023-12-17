@@ -19,8 +19,8 @@ export const items = [
     ),
   },
   {
-    title: "Pollster",
-    path: "/pollster",
+    title: "Pollsters",
+    path: "/pollsters",
     icon: (
       <SvgIcon fontSize="small">
         <UsersIcon />
@@ -28,8 +28,8 @@ export const items = [
     ),
   },
   {
-    title: "Companies",
-    path: "/companies",
+    title: "Areas",
+    path: "/areas",
     icon: (
       <SvgIcon fontSize="small">
         <ShoppingBagIcon />
