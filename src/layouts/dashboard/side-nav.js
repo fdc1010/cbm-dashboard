@@ -135,7 +135,7 @@ export const SideNav = (props) => {
               </SvgIcon>
             }
             fullWidth
-            href="https://cbm.io/"
+            href="https://cbm-dashboard-fdc1010.vercel.app/"
             sx={{ mt: 2 }}
             target="_blank"
             variant="contained"
