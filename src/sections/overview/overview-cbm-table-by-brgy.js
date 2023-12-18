@@ -29,7 +29,7 @@ export const OverviewCbmTableByBrgy = (props) => {
 
   return (
     <Card sx={sx}>
-      <CardHeader title="CBM by Barangay" />
+      <CardHeader title="Result by Barangay" />
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box sx={{ minWidth: 800 }}>
           <Table>
