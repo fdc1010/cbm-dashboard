@@ -4,7 +4,7 @@ export const ByBrgy = [
     ref: "Apas",
     amount: 30.5,
     customer: {
-      name: "Ekaterina Tankova",
+      name: "Erika Sena",
     },
     characteristics: '',
     demography: '',
@@ -19,7 +19,7 @@ export const ByBrgy = [
     ref: "Lahug",
     amount: 25.1,
     customer: {
-      name: "Cao Yu",
+      name: "Frank Carz",
     },
     characteristics: '',
     demography: '',
@@ -34,7 +34,7 @@ export const ByBrgy = [
     ref: "Apas",
     amount: 10.99,
     customer: {
-      name: "Alexa Richardson",
+      name: "Alexa Tolibao",
     },
     characteristics: '',
     demography: '',
@@ -49,7 +49,7 @@ export const ByBrgy = [
     ref: "Talamban",
     amount: 96.43,
     customer: {
-      name: "Anje Keizer",
+      name: "Steven Rusta",
     },
     characteristics: '',
     demography: '',
@@ -64,7 +64,7 @@ export const ByBrgy = [
     ref: "Tisa",
     amount: 32.54,
     customer: {
-      name: "Clarke Gillebert",
+      name: "Mark Tan",
     },
     characteristics: '',
     demography: '',
@@ -79,7 +79,7 @@ export const ByBrgy = [
     ref: "Labangon",
     amount: 16.76,
     customer: {
-      name: "Adam Denisov",
+      name: "Lea Reyes",
     },
     characteristics: '',
     demography: '',
