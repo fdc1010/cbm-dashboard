@@ -34,7 +34,7 @@ export const TableLiteracy = (props) => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell rowSpan={2}>Seq. # from Table A</TableCell> 
+                <TableCell rowSpan={2}>Table A. #</TableCell> 
                 <TableCell style={{ padding: 0 }}>
                   <TableRow>                      
                     <TableCell>Grade Level / Highest Education</TableCell>
