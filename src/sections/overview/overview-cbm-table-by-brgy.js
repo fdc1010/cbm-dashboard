@@ -43,12 +43,8 @@ export const OverviewCbmTableByBrgy = (props) => {
                   <TableRow>
                     <TableCell>Type</TableCell>
                     <TableCell>Bedrooms</TableCell>
-                    <TableCell>
-                      <TableRow>
-                        <TableCell>Roof</TableCell>
-                        <TableCell>OuterWall</TableCell>
-                      </TableRow>
-                    </TableCell>  
+                    <TableCell>Roof</TableCell>
+                    <TableCell>OuterWall</TableCell>
                   </TableRow>
                 </TableCell>
                 <TableCell>

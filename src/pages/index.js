@@ -1,19 +1,18 @@
 import Head from "next/head";
-import { subDays, subHours } from "date-fns";
 import { Box, Container, Unstable_Grid2 as Grid } from "@mui/material";
 import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
 import { OverviewBudget } from "src/sections/overview/overview-budget";
 import { OverviewLatestOrders } from "src/sections/overview/overview-latest-orders";
-import { OverviewLatestProducts } from "src/sections/overview/overview-latest-products";
-import { OverviewCbmTableByBrgy } from "src/sections/overview/overview-cbm-table-by-brgy";
 import { OverviewSales } from "src/sections/overview/overview-sales";
 import { OverviewTasksProgress } from "src/sections/overview/overview-tasks-progress";
 import { OverviewTotalCustomers } from "src/sections/overview/overview-total-customers";
 import { OverviewTotalProfit } from "src/sections/overview/overview-total-profit";
 import { OverviewTraffic } from "src/sections/overview/overview-traffic";
-import { ByBrgy } from "src/datasets";
-
-const now = new Date();
+import { DemographyData, HouseholdCharacteristicsData, HousingCharacteristicsData, LiteracyData } from "src/datasets";
+import { TableHousingCharacteristic } from "src/sections/overview/TableHousingCharacteristic";
+import { TableHouseholdCharacteristic } from "src/sections/overview/TableHouseholdCharacteristic";
+import { TableDemography } from "src/sections/overview/TableDemography";
+import { TableLiteracy } from "src/sections/overview/TableLiteracy";
 
 const Page = () => (
   <>
@@ -135,9 +134,27 @@ const Page = () => (
               sx={{ height: "100%" }}
             />
           </Grid>
-          <Grid xs={12} md={12} lg={12}>
-            <OverviewCbmTableByBrgy
-              tally={ByBrgy}
+          <Grid xs={12} md={6} lg={6}>
+            <TableHousingCharacteristic
+              tally={HousingCharacteristicsData}
+              sx={{ height: "100%" }}
+            />
+          </Grid>
+          <Grid xs={12} md={6} lg={6}>
+            <TableHouseholdCharacteristic
+              tally={HouseholdCharacteristicsData}
+              sx={{ height: "100%" }}
+            />
+          </Grid>
+          <Grid xs={12} md={6} lg={6}>
+            <TableDemography
+              tally={DemographyData}
+              sx={{ height: "100%" }}
+            />
+          </Grid>
+          <Grid xs={12} md={6} lg={6}>
+            <TableLiteracy
+              tally={LiteracyData}
               sx={{ height: "100%" }}
             />
           </Grid>
