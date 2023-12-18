@@ -17,11 +17,11 @@ import {
 } from "@mui/material";
 import { Scrollbar } from "src/components/scrollbar";
 
-export const TableHouseholdCharacteristic = (props) => {
+export const TableEconomic = (props) => {
   const { tally = [], sx } = props;
   return (
     <Card sx={sx}>
-      <CardHeader title="C. Household Characteristics" />
+      <CardHeader title="G. Economic Activity" />
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box sx={{ minWidth: 800 }}>
           <Table>
@@ -30,13 +30,10 @@ export const TableHouseholdCharacteristic = (props) => {
                 <TableCell rowSpan={2}>Table A. #</TableCell> 
                 <TableCell style={{ padding: 0 }}>
                   <TableRow>
-                    <TableCell>Nuclear Families</TableCell>              
-                    <TableCell>overseas workers</TableCell>     
-                    <TableCell>Has Pregnant</TableCell>
-                    <TableCell>Has Solo Parent</TableCell>
-                    <TableCell>Has Disabled</TableCell>
+                    <TableCell>Worked for an hr the past week</TableCell>
+                    <TableCell>Didn&apos;t work the past week</TableCell>
                   </TableRow>
-                </TableCell>
+                </TableCell>           
               </TableRow>
             </TableHead>
             <TableBody>
@@ -44,12 +41,9 @@ export const TableHouseholdCharacteristic = (props) => {
 
                 return (
                   <TableRow hover key={rec.id}>
-                    <TableCell>{tally.findIndex(item=>item.id === rec.id) + 1}</TableCell>
+                    <TableCell>{tally.findIndex(item=>item.id === rec.id)+1}</TableCell>
                     <TableCell>
                       <TableRow>
-                        <TableCell></TableCell>              
-                        <TableCell></TableCell>     
-                        <TableCell></TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                       </TableRow>
@@ -80,7 +74,7 @@ export const TableHouseholdCharacteristic = (props) => {
   );
 };
 
-TableHouseholdCharacteristic.prototype = {
+TableEconomic.prototype = {
   tally: PropTypes.array,
   sx: PropTypes.object,
 };

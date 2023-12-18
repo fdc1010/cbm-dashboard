@@ -16,13 +16,6 @@ import {
   TableRow
 } from "@mui/material";
 import { Scrollbar } from "src/components/scrollbar";
-import { SeverityPill } from "src/components/severity-pill";
-
-const statusMap = {
-  inprogress: "warning",
-  completed: "success",
-  flunk: "error",
-};
 
 export const TableHousingCharacteristic = (props) => {
   const { tally = [], sx } = props;
@@ -47,7 +40,6 @@ export const TableHousingCharacteristic = (props) => {
             </TableHead>
             <TableBody>
               {tally.map((rec) => {
-                const createdAt = format(rec.createdAt, "dd/MM/yyyy");
 
                 return (
                   <TableRow hover key={rec.id}>

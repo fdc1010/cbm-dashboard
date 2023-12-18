@@ -16,19 +16,12 @@ import {
   TableRow
 } from "@mui/material";
 import { Scrollbar } from "src/components/scrollbar";
-import { SeverityPill } from "src/components/severity-pill";
-
-const statusMap = {
-  inprogress: "warning",
-  completed: "success",
-  flunk: "error",
-};
 
 export const TablePoliticalParticipation = (props) => {
   const { tally = [], sx } = props;
   return (
     <Card sx={sx}>
-      <CardHeader title="Surveys" />
+      <CardHeader title="F. Political Participation" />
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box sx={{ minWidth: 800 }}>
           <Table>
@@ -48,12 +41,10 @@ export const TablePoliticalParticipation = (props) => {
             </TableHead>
             <TableBody>
               {tally.map((rec) => {
-                const createdAt = format(rec.createdAt, "dd/MM/yyyy");
 
                 return (
                   <TableRow hover key={rec.id}>
                     <TableCell>{tally.findIndex(item=>item.id === rec.id) + 1}</TableCell>
-                    <TableCell></TableCell>
                     <TableCell></TableCell>
                   </TableRow>
                 );

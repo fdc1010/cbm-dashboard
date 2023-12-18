@@ -7,13 +7,14 @@ import { OverviewSales } from "src/sections/overview/overview-sales";
 import { OverviewTasksProgress } from "src/sections/overview/overview-tasks-progress";
 import { OverviewTotalCustomers } from "src/sections/overview/overview-total-customers";
 import { OverviewTotalProfit } from "src/sections/overview/overview-total-profit";
-import { OverviewTraffic } from "src/sections/overview/overview-traffic";
-import { CbmOverviewData, DemographyData, HouseholdCharacteristicsData, HousingCharacteristicsData, LiteracyData } from "src/datasets";
+import { CbmOverviewData, DemographyData, EconomicActivityData, HouseholdCharacteristicsData, HousingCharacteristicsData, LiteracyData, PoliticalParticipationData } from "src/datasets";
 import { TableHousingCharacteristic } from "src/sections/overview/TableHousingCharacteristic";
 import { TableHouseholdCharacteristic } from "src/sections/overview/TableHouseholdCharacteristic";
 import { TableDemography } from "src/sections/overview/TableDemography";
 import { TableLiteracy } from "src/sections/overview/TableLiteracy";
 import { TableCbmOverview } from "src/sections/overview/TableCbmOverview";
+import { TableEconomic } from "src/sections/overview/TableEconomic";
+import { TablePoliticalParticipation } from "src/sections/overview/TablePoliticalParticipation";
 
 const Page = () => (
   <>
@@ -155,6 +156,18 @@ const Page = () => (
           <Grid xs={12} md={6} lg={6}>
             <TableLiteracy
               tally={LiteracyData}
+              sx={{ height: "100%" }}
+            />
+          </Grid>
+          <Grid xs={12} md={6} lg={6}>
+            <TablePoliticalParticipation
+              tally={PoliticalParticipationData}
+              sx={{ height: "100%" }}
+            />
+          </Grid>
+          <Grid xs={12} md={6} lg={6}>
+            <TableEconomic
+              tally={EconomicActivityData}
               sx={{ height: "100%" }}
             />
           </Grid>
