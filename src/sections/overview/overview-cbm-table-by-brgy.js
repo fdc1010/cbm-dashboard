@@ -19,7 +19,7 @@ import { Scrollbar } from "src/components/scrollbar";
 import { SeverityPill } from "src/components/severity-pill";
 
 const statusMap = {
-  pending: "warning",
+  inprogress: "warning",
   completed: "success",
   flunk: "error",
 };
@@ -47,21 +47,21 @@ export const OverviewCbmTableByBrgy = (props) => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {tally.map((order) => {
-                const createdAt = format(order.createdAt, "dd/MM/yyyy");
+              {tally.map((rec) => {
+                const createdAt = format(rec.createdAt, "dd/MM/yyyy");
 
                 return (
-                  <TableRow hover key={order.id}>
-                    <TableCell>{order.ref}</TableCell>
-                    <TableCell>{order.customer.name}</TableCell>
-                    <TableCell>Characteristics</TableCell>
-                    <TableCell>Demography</TableCell>
-                    <TableCell>Literacy</TableCell>
-                    <TableCell>Political Participation</TableCell>
-                    <TableCell>Economic Activity</TableCell>
+                  <TableRow hover key={rec.id}>
+                    <TableCell>{rec.ref}</TableCell>
+                    <TableCell>{rec.customer.name}</TableCell>
+                    <TableCell>{rec.characteristics}</TableCell>
+                    <TableCell>{rec.demography}</TableCell>
+                    <TableCell>{rec.literacy}</TableCell>
+                    <TableCell>{rec.political}</TableCell>
+                    <TableCell>{rec.economic}</TableCell>
                     <TableCell>{createdAt}</TableCell>
                     <TableCell>
-                      <SeverityPill color={statusMap[order.status]}>{order.status}</SeverityPill>
+                      <SeverityPill color={statusMap[rec.status]}>{rec.status}</SeverityPill>
                     </TableCell>
                   </TableRow>
                 );
