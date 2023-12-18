@@ -96,7 +96,7 @@ export const OverviewCbmTableByBrgy = (props) => {
                   </TableRow>
                   <TableRow>
                     <TableCell>Worked for an hr the past week</TableCell>
-                    <TableCell>Didn't work the past week</TableCell>
+                    <TableCell>Didn&apos;t work the past week</TableCell>
                   </TableRow>
                 </TableCell>
                 <TableCell>
