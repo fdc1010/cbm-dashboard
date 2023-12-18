@@ -34,43 +34,27 @@ export const TableDemography = (props) => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell align="center" rowSpan={2}>#</TableCell> 
-                <TableCell align="center" rowSpan={2}>Brgy</TableCell> 
+                <TableCell rowSpan={2}>Seq. # from Table A</TableCell> 
                 <TableCell style={{ padding: 0 }}>
                   <TableRow>                      
                     <TableCell>Relation to head of the household</TableCell>
                     <TableCell>Marital status</TableCell>
                   </TableRow>
                 </TableCell>
-                <TableCell>
-                  <TableRow>
-                    <TableCell sortDirection="desc" style={{ padding: 0 }} colSpan={2} align="center">Date</TableCell>
-                  </TableRow>
-                </TableCell>
-                <TableCell>
-                  <TableRow>
-                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Status</TableCell>
-                  </TableRow>
-                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {tally.map((rec,i) => {
+              {tally.map((rec) => {
                 const createdAt = format(rec.createdAt, "dd/MM/yyyy");
 
                 return (
                   <TableRow hover key={rec.id}>
-                    <TableCell>{i+1}</TableCell>
-                    <TableCell>{rec.ref}</TableCell>
+                    <TableCell>{tally.findIndex(item=>item.id === rec.id)+1}</TableCell>
                     <TableCell>
                       <TableRow>                      
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                       </TableRow>
-                    </TableCell>
-                    <TableCell>{createdAt}</TableCell>
-                    <TableCell>
-                      <SeverityPill color={statusMap[rec.status]}>{rec.status}</SeverityPill>
                     </TableCell>
                   </TableRow>
                 );

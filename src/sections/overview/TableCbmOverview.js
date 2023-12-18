@@ -24,37 +24,42 @@ const statusMap = {
   flunk: "error",
 };
 
-export const TablePoliticalParticipation = (props) => {
+export const TableCbmOverview = (props) => {
   const { tally = [], sx } = props;
   return (
     <Card sx={sx}>
-      <CardHeader title="Surveys" />
+      <CardHeader title="A. Overview" />
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box sx={{ minWidth: 800 }}>
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell rowSpan={2}>Seq. # from Table A</TableCell> 
+                <TableCell rowSpan={2}>#</TableCell> 
+                <TableCell rowSpan={2}>Brgy</TableCell> 
                 <TableCell style={{ padding: 0 }}>
                   <TableRow>
-                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Political Participation</TableCell>
-                  </TableRow> 
-                  <TableRow>                      
-                    <TableCell>Registered voter</TableCell>
-                    <TableCell>Vote in the last election</TableCell>
+                    <TableCell sortDirection="desc" style={{ padding: 0 }} colSpan={2} align="center">Date</TableCell>
                   </TableRow>
-                </TableCell>          
+                </TableCell>
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Status</TableCell>
+                  </TableRow>
+                </TableCell>                
               </TableRow>
             </TableHead>
             <TableBody>
-              {tally.map((rec) => {
+              {tally.map((rec,i) => {
                 const createdAt = format(rec.createdAt, "dd/MM/yyyy");
 
                 return (
                   <TableRow hover key={rec.id}>
-                    <TableCell>{tally.findIndex(item=>item.id === rec.id) + 1}</TableCell>
-                    <TableCell></TableCell>
-                    <TableCell></TableCell>
+                    <TableCell>{i+1}</TableCell>
+                    <TableCell>{rec.ref}</TableCell>
+                    <TableCell>{createdAt}</TableCell>
+                    <TableCell>
+                      <SeverityPill color={statusMap[rec.status]}>{rec.status}</SeverityPill>
+                    </TableCell>
                   </TableRow>
                 );
               })}
@@ -81,7 +86,7 @@ export const TablePoliticalParticipation = (props) => {
   );
 };
 
-TablePoliticalParticipation.prototype = {
+TableCbmOverview.prototype = {
   tally: PropTypes.array,
   sx: PropTypes.object,
 };

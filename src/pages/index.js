@@ -8,11 +8,12 @@ import { OverviewTasksProgress } from "src/sections/overview/overview-tasks-prog
 import { OverviewTotalCustomers } from "src/sections/overview/overview-total-customers";
 import { OverviewTotalProfit } from "src/sections/overview/overview-total-profit";
 import { OverviewTraffic } from "src/sections/overview/overview-traffic";
-import { DemographyData, HouseholdCharacteristicsData, HousingCharacteristicsData, LiteracyData } from "src/datasets";
+import { CbmOverviewData, DemographyData, HouseholdCharacteristicsData, HousingCharacteristicsData, LiteracyData } from "src/datasets";
 import { TableHousingCharacteristic } from "src/sections/overview/TableHousingCharacteristic";
 import { TableHouseholdCharacteristic } from "src/sections/overview/TableHouseholdCharacteristic";
 import { TableDemography } from "src/sections/overview/TableDemography";
 import { TableLiteracy } from "src/sections/overview/TableLiteracy";
+import { TableCbmOverview } from "src/sections/overview/TableCbmOverview";
 
 const Page = () => (
   <>
@@ -67,7 +68,7 @@ const Page = () => (
               sx={{ height: "100%" }}
             />
           </Grid>
-          <Grid xs={12} md={12} lg={12}>
+          <Grid xs={12} md={6} lg={6}>
             <OverviewLatestOrders
               orders={[
                 {
@@ -131,6 +132,12 @@ const Page = () => (
                   status: "completed",
                 },
               ]}
+              sx={{ height: "100%" }}
+            />
+          </Grid>
+          <Grid xs={12} md={6} lg={6}>
+            <TableCbmOverview
+              tally={CbmOverviewData}
               sx={{ height: "100%" }}
             />
           </Grid>
