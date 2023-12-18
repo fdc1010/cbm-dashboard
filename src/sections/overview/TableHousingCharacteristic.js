@@ -28,7 +28,7 @@ export const TableHousingCharacteristic = (props) => {
   const { tally = [], sx } = props;
   return (
     <Card sx={sx}>
-      <CardHeader title="A. Housing Characteristics" />
+      <CardHeader title="B. Housing Characteristics" />
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box sx={{ minWidth: 800 }}>
           <Table>
