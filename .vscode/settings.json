@@ -1,0 +1,15 @@
+{
+	"prettier.semi": false,
+	"javascript.format.semicolons": "ignore",
+	"gitlens.hovers.annotations.over": "line",
+	"editor.tabSize": 2,
+	"eslint.format.enable": true,
+	"eslint.lintTask.enable": true,
+	"eslint.options": {
+		"parser": "@babel/eslint-parser"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"eslint.validate": ["javascript"]
+}

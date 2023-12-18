@@ -17,6 +17,7 @@ import {
 } from "@mui/material";
 import { Scrollbar } from "src/components/scrollbar";
 import { SeverityPill } from "src/components/severity-pill";
+import { Stack } from "@mui/system";
 
 const statusMap = {
   inprogress: "warning",
@@ -26,7 +27,6 @@ const statusMap = {
 
 export const OverviewCbmTableByBrgy = (props) => {
   const { tally = [], sx } = props;
-
   return (
     <Card sx={sx}>
       <CardHeader title="By Barangay" />
@@ -35,15 +35,79 @@ export const OverviewCbmTableByBrgy = (props) => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Brgy</TableCell>
-                <TableCell>Household</TableCell>
-                <TableCell>Characteristics</TableCell>
-                <TableCell>Demography</TableCell>
-                <TableCell>Literacy</TableCell>
-                <TableCell>Political Participation</TableCell>
-                <TableCell>Economic Activity</TableCell>
+                <TableCell align="center" rowSpan={2}>Brgy</TableCell> 
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={4} align="center">Household</TableCell>
+                  </TableRow>   
+                  <TableRow>
+                    <TableCell>Type</TableCell>
+                    <TableCell>Bedrooms</TableCell>
+                    <TableCell>
+                      <TableRow>
+                        <TableCell style={{ padding: 0 }} colSpan={2} align="center">Materials</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>Roof</TableCell>
+                        <TableCell>OuterWall</TableCell>
+                      </TableRow>
+                    </TableCell>  
+                  </TableRow>
+                </TableCell>
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={4} align="center">Characteristics</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Nuclear Families</TableCell>
+                    <TableRow>
+                      <TableCell style={{ padding: 0 }} colSpan={3} align="center">Household Members</TableCell>
+                    </TableRow> 
+                    <TableRow>                      
+                      <TableCell>overseas workers</TableCell>
+                      <TableCell>pregnant</TableCell>
+                      <TableCell>disabled</TableCell>
+                    </TableRow> 
+                  </TableRow>
+                </TableCell>
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Demography</TableCell>
+                  </TableRow> 
+                  <TableRow>                      
+                    <TableCell>Relation to head household</TableCell>
+                    <TableCell>Marital status</TableCell>
+                  </TableRow>
+                </TableCell>
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Literacy</TableCell>
+                  </TableRow> 
+                  <TableRow>                      
+                    <TableCell>Grade level Highest educational attainment</TableCell>
+                    <TableCell>Reason for not attending school</TableCell>
+                  </TableRow>
+                </TableCell>
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Political Participation</TableCell>
+                  </TableRow> 
+                  <TableRow>                      
+                    <TableCell>Registered voter</TableCell>
+                    <TableCell>Vote in the last election</TableCell>
+                  </TableRow>
+                </TableCell>
+                <TableCell>
+                  <TableRow>
+                    <TableCell>Economic Activity</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Did work for atleast one hour during the past week</TableCell>
+                  </TableRow>
+                </TableCell>
+                <TableCell>Did not work, did have a job or business during the past week</TableCell>
                 <TableCell sortDirection="desc">Date</TableCell>
-                <TableCell>Status</TableCell>
+                <TableCell>Status</TableCell>                
               </TableRow>
             </TableHead>
             <TableBody>
@@ -53,12 +117,13 @@ export const OverviewCbmTableByBrgy = (props) => {
                 return (
                   <TableRow hover key={rec.id}>
                     <TableCell>{rec.ref}</TableCell>
-                    <TableCell>{rec.customer.name}</TableCell>
+                    <TableCell><TableRow><TableCell></TableCell></TableRow><TableRow><TableCell></TableCell></TableRow></TableCell>
                     <TableCell>{rec.characteristics}</TableCell>
                     <TableCell>{rec.demography}</TableCell>
                     <TableCell>{rec.literacy}</TableCell>
                     <TableCell>{rec.political}</TableCell>
                     <TableCell>{rec.economic}</TableCell>
+                    <TableCell></TableCell>
                     <TableCell>{createdAt}</TableCell>
                     <TableCell>
                       <SeverityPill color={statusMap[rec.status]}>{rec.status}</SeverityPill>

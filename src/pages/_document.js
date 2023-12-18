@@ -1,3 +1,4 @@
+// eslint-disable
 import { Children } from 'react';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
@@ -103,3 +104,5 @@ CustomDocument.getInitialProps = async (ctx) => {
 };
 
 export default CustomDocument;
+
+// eslint-enable
