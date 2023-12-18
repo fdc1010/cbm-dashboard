@@ -84,8 +84,8 @@ export const OverviewCbmTableByBrgy = (props) => {
                     <TableCell style={{ padding: 0 }} colSpan={2} align="center">Literacy</TableCell>
                   </TableRow> 
                   <TableRow>                      
-                    <TableCell>Grade level Highest educational attainment</TableCell>
-                    <TableCell>Reason for not attending school</TableCell>
+                    <TableCell>Grade Level</TableCell>
+                    <TableCell>Reason for not attending</TableCell>
                   </TableRow>
                 </TableCell>
                 <TableCell>
@@ -99,13 +99,13 @@ export const OverviewCbmTableByBrgy = (props) => {
                 </TableCell>
                 <TableCell>
                   <TableRow>
-                    <TableCell>Economic Activity</TableCell>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Economic Activity</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>Did work for atleast one hour during the past week</TableCell>
+                    <TableCell>Worked atleast one hour for the past week</TableCell>
+                    <TableCell>Did not work, did have a job or business during the past week</TableCell>
                   </TableRow>
-                </TableCell>
-                <TableCell>Did not work, did have a job or business during the past week</TableCell>
+                </TableCell>                
                 <TableCell sortDirection="desc">Date</TableCell>
                 <TableCell>Status</TableCell>                
               </TableRow>
@@ -117,13 +117,12 @@ export const OverviewCbmTableByBrgy = (props) => {
                 return (
                   <TableRow hover key={rec.id}>
                     <TableCell>{rec.ref}</TableCell>
-                    <TableCell><TableRow><TableCell></TableCell></TableRow><TableRow><TableCell></TableCell></TableRow></TableCell>
+                    <TableCell></TableCell>
                     <TableCell>{rec.characteristics}</TableCell>
                     <TableCell>{rec.demography}</TableCell>
                     <TableCell>{rec.literacy}</TableCell>
                     <TableCell>{rec.political}</TableCell>
                     <TableCell>{rec.economic}</TableCell>
-                    <TableCell></TableCell>
                     <TableCell>{createdAt}</TableCell>
                     <TableCell>
                       <SeverityPill color={statusMap[rec.status]}>{rec.status}</SeverityPill>
