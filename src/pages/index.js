@@ -136,7 +136,7 @@ const Page = () => (
           </Grid>
           <Grid xs={12} md={12} lg={12}>
             <OverviewCbmTableByBrgy
-              orders={[
+              tally={[
                 {
                   id: "f69f88012978187a6c12897f",
                   ref: "Apas",
