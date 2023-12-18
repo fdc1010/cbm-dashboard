@@ -5,6 +5,7 @@ import { Layout as DashboardLayout } from "src/layouts/dashboard/layout";
 import { OverviewBudget } from "src/sections/overview/overview-budget";
 import { OverviewLatestOrders } from "src/sections/overview/overview-latest-orders";
 import { OverviewLatestProducts } from "src/sections/overview/overview-latest-products";
+import { OverviewCbmTableByBrgy } from "src/sections/overview/overview-cbm-table-by-brgy";
 import { OverviewSales } from "src/sections/overview/overview-sales";
 import { OverviewTasksProgress } from "src/sections/overview/overview-tasks-progress";
 import { OverviewTotalCustomers } from "src/sections/overview/overview-total-customers";
@@ -68,6 +69,73 @@ const Page = () => (
           </Grid>
           <Grid xs={12} md={12} lg={12}>
             <OverviewLatestOrders
+              orders={[
+                {
+                  id: "f69f88012978187a6c12897f",
+                  ref: "Apas",
+                  amount: 30.5,
+                  customer: {
+                    name: "Ekaterina Tankova",
+                  },
+                  createdAt: 1555016400000,
+                  status: "pending",
+                },
+                {
+                  id: "9eaa1c7dd4433f413c308ce2",
+                  ref: "Lahug",
+                  amount: 25.1,
+                  customer: {
+                    name: "Cao Yu",
+                  },
+                  createdAt: 1555016400000,
+                  status: "completed",
+                },
+                {
+                  id: "01a5230c811bd04996ce7c13",
+                  ref: "Apas",
+                  amount: 10.99,
+                  customer: {
+                    name: "Alexa Richardson",
+                  },
+                  createdAt: 1554930000000,
+                  status: "flunk",
+                },
+                {
+                  id: "1f4e1bd0a87cea23cdb83d18",
+                  ref: "Talamban",
+                  amount: 96.43,
+                  customer: {
+                    name: "Anje Keizer",
+                  },
+                  createdAt: 1554757200000,
+                  status: "pending",
+                },
+                {
+                  id: "9f974f239d29ede969367103",
+                  ref: "Tisa",
+                  amount: 32.54,
+                  customer: {
+                    name: "Clarke Gillebert",
+                  },
+                  createdAt: 1554670800000,
+                  status: "completed",
+                },
+                {
+                  id: "ffc83c1560ec2f66a1c05596",
+                  ref: "Labangon",
+                  amount: 16.76,
+                  customer: {
+                    name: "Adam Denisov",
+                  },
+                  createdAt: 1554670800000,
+                  status: "completed",
+                },
+              ]}
+              sx={{ height: "100%" }}
+            />
+          </Grid>
+          <Grid xs={12} md={12} lg={12}>
+            <OverviewCbmTableByBrgy
               orders={[
                 {
                   id: "f69f88012978187a6c12897f",
