@@ -28,14 +28,10 @@ export const TableHousingCharacteristic = (props) => {
             <TableHead>
               <TableRow>
                 <TableCell rowSpan={2}>Table A. #</TableCell> 
-                <TableCell style={{ padding: 0 }}>
-                  <TableRow>
-                    <TableCell>Type</TableCell>
-                    <TableCell>Bedrooms</TableCell>
-                    <TableCell>Roof</TableCell>
-                    <TableCell>OuterWall</TableCell>
-                  </TableRow>
-                </TableCell> 
+                <TableCell>Type</TableCell>
+                <TableCell>Bedrooms</TableCell>
+                <TableCell>Roof</TableCell>
+                <TableCell>OuterWall</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -44,14 +40,10 @@ export const TableHousingCharacteristic = (props) => {
                 return (
                   <TableRow hover key={rec.id}>
                     <TableCell>{tally.findIndex(item=>item.id === rec.id) + 1}</TableCell>
-                    <TableCell>
-                      <TableRow>
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                      </TableRow>
-                    </TableCell>
+                    <TableCell>{rec.type}</TableCell>
+                    <TableCell>{rec.bedrooms}</TableCell>
+                    <TableCell>{rec.roof}</TableCell>
+                    <TableCell>{rec.outerwall}</TableCell>
                   </TableRow>
                 );
               })}

@@ -28,15 +28,11 @@ export const TableHouseholdCharacteristic = (props) => {
             <TableHead>
               <TableRow>
                 <TableCell rowSpan={2}>Table A. #</TableCell> 
-                <TableCell style={{ padding: 0 }}>
-                  <TableRow>
-                    <TableCell>Nuclear Families</TableCell>              
-                    <TableCell>overseas workers</TableCell>     
-                    <TableCell>Has Pregnant</TableCell>
-                    <TableCell>Has Solo Parent</TableCell>
-                    <TableCell>Has Disabled</TableCell>
-                  </TableRow>
-                </TableCell>
+                <TableCell>Nuclear Families</TableCell>              
+                <TableCell>overseas workers</TableCell>     
+                <TableCell>Has Pregnant</TableCell>
+                <TableCell>Has Solo Parent</TableCell>
+                <TableCell>Has Disabled</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -45,15 +41,11 @@ export const TableHouseholdCharacteristic = (props) => {
                 return (
                   <TableRow hover key={rec.id}>
                     <TableCell>{tally.findIndex(item=>item.id === rec.id) + 1}</TableCell>
-                    <TableCell>
-                      <TableRow>
-                        <TableCell></TableCell>              
-                        <TableCell></TableCell>     
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                      </TableRow>
-                    </TableCell>
+                    <TableCell>{rec.nuclear}</TableCell>              
+                    <TableCell>{rec.overseas}</TableCell>     
+                    <TableCell>{rec.solo_parent}</TableCell>
+                    <TableCell>{rec.pregnant}</TableCell>
+                    <TableCell>{rec.disabled}</TableCell>
                   </TableRow>
                 );
               })}

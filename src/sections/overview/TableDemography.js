@@ -27,34 +27,26 @@ export const TableDemography = (props) => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell rowSpan={2}>Table A. #</TableCell> 
-                <TableCell style={{ padding: 0 }}>
-                  <TableRow>                      
-                    <TableCell>&gt; 10 Members</TableCell>
-                    <TableCell>Relation to head of the household</TableCell>
-                    <TableCell>Gender</TableCell>
-                    <TableCell>Registered Birth</TableCell>
-                    <TableCell>Marital status</TableCell>
-                    <TableCell>Ethnicity</TableCell>
-                  </TableRow>
-                </TableCell>
+                <TableCell rowSpan={2}>Table A. #</TableCell>                 
+                <TableCell>&gt; 10 Members</TableCell>
+                <TableCell>Relation to head of the household</TableCell>
+                <TableCell>Gender</TableCell>
+                <TableCell>Registered Birth</TableCell>
+                <TableCell>Marital status</TableCell>
+                <TableCell>Ethnicity</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {tally.map((rec) => {
                 return (
                   <TableRow hover key={rec.id}>
-                    <TableCell>{tally.findIndex(item=>item.id === rec.id)+1}</TableCell>
-                    <TableCell>
-                      <TableRow>                      
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                      </TableRow>
-                    </TableCell>
+                    <TableCell>{tally.findIndex(item=>item.id === rec.id)+1}</TableCell>                
+                    <TableCell>{rec.gt_ten_members}</TableCell>
+                    <TableCell>{rec.relation}</TableCell>
+                    <TableCell>{rec.gender}</TableCell>
+                    <TableCell>{rec.reg_birth}</TableCell>
+                    <TableCell>{rec.marital}</TableCell>
+                    <TableCell>{rec.ethnicity}</TableCell>
                   </TableRow>
                 );
               })}

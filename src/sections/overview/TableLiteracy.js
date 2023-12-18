@@ -35,12 +35,9 @@ export const TableLiteracy = (props) => {
             <TableHead>
               <TableRow>
                 <TableCell rowSpan={2}>Table A. #</TableCell> 
-                <TableCell style={{ padding: 0 }}>
-                  <TableRow>                      
-                    <TableCell>Grade Level / Highest Education</TableCell>
-                    <TableCell>Reason for not attending</TableCell>
-                  </TableRow>
-                </TableCell>
+                <TableCell>Grade Level / Highest Education</TableCell>
+                <TableCell>Can Read & Write</TableCell>
+                <TableCell>Reason for not attending</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -50,12 +47,9 @@ export const TableLiteracy = (props) => {
                 return (
                   <TableRow hover key={rec.id}>
                     <TableCell>{tally.findIndex(item=>item.id === rec.id) + 1}</TableCell>
-                    <TableCell>
-                      <TableRow>                      
-                        <TableCell></TableCell>
-                        <TableCell></TableCell>
-                      </TableRow>
-                    </TableCell>
+                    <TableCell>{rec.grade}</TableCell>
+                    <TableCell>{rec.can_read_write}</TableCell>
+                    <TableCell>{rec.reason}</TableCell>
                   </TableRow>
                 );
               })}
