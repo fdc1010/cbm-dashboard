@@ -1,3 +1,5 @@
+export const HousingTypes = ["", "Single house","Duplex","Multi-unit residential (three units or more)", "Commercial / Industrial / Agricultural building (office, factory and others)", "Other housing unit (boat, cave and others)"]
+export const MadeTypes = ["","Strong materials (galvanized iron, aluminum, tile, concrete, brick, stone, asbestos)","Light materials (cogon, nipa, anahaw)","Salvaged/makeshift materials","Mixed but predominantly strong materials","Mixed but predominantly light materials","Mixed but predominantly salvaged materials","Not applicable"]
 export const ByBrgy = [
   {
     id: "f69f88012978187a6c12897f",
@@ -6,11 +8,50 @@ export const ByBrgy = [
     customer: {
       name: "Erika Sena",
     },
-    characteristics: '',
-    demography: '',
-    literacy: '',
-    political: '',
-    economic: '',
+    housing_characteristics: {
+      type: HousingTypes[1], 
+      bedrooms: "2",
+      roof: MadeTypes[5],
+      outerwall: MadeTypes[3]
+    },
+    characteristics: {
+      nuclear: "2",
+      overseas: "0",
+      solo_parent: "",
+      pregnant: "",
+      disabled: ""
+    },
+    demography: {
+      relation: "",
+      marital: ""
+    },
+    literacy: {
+      grade: "",
+      reason: ""
+    },
+    political: {
+      is_voter: "",
+      voted_last: ""
+    },
+    economic: {
+      worked: "",
+      not: ""
+    },
+    health: "",
+    crime: "",
+    nutrition: "",
+    sanitation: "",
+    housing: "",
+    waste_management: "",
+    income: "",
+    entrepreneurial: "",
+    agricultural: "",
+    livestock: "",
+    fishing: "",
+    climate: "",
+    hunger: "",
+    deceased: "",
+    programs: "",
     createdAt: 1555016400000,
     status: "inprogress",
   },

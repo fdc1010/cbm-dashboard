@@ -13,11 +13,10 @@ import {
   TableBody,
   TableCell,
   TableHead,
-  TableRow,
+  TableRow
 } from "@mui/material";
 import { Scrollbar } from "src/components/scrollbar";
 import { SeverityPill } from "src/components/severity-pill";
-import { Stack } from "@mui/system";
 
 const statusMap = {
   inprogress: "warning",
@@ -29,24 +28,22 @@ export const OverviewCbmTableByBrgy = (props) => {
   const { tally = [], sx } = props;
   return (
     <Card sx={sx}>
-      <CardHeader title="By Barangay" />
+      <CardHeader title="Surveys" />
       <Scrollbar sx={{ flexGrow: 1 }}>
         <Box sx={{ minWidth: 800 }}>
           <Table>
             <TableHead>
               <TableRow>
+                <TableCell align="center" rowSpan={2}>#</TableCell> 
                 <TableCell align="center" rowSpan={2}>Brgy</TableCell> 
-                <TableCell>
+                <TableCell style={{ padding: 0 }}>
                   <TableRow>
-                    <TableCell style={{ padding: 0 }} colSpan={4} align="center">Household</TableCell>
+                    <TableCell style={{ padding: 0 }} colSpan={4} align="center">Housing Characteristics</TableCell>
                   </TableRow>   
                   <TableRow>
                     <TableCell>Type</TableCell>
                     <TableCell>Bedrooms</TableCell>
                     <TableCell>
-                      <TableRow>
-                        <TableCell style={{ padding: 0 }} colSpan={2} align="center">Materials</TableCell>
-                      </TableRow>
                       <TableRow>
                         <TableCell>Roof</TableCell>
                         <TableCell>OuterWall</TableCell>
@@ -56,18 +53,14 @@ export const OverviewCbmTableByBrgy = (props) => {
                 </TableCell>
                 <TableCell>
                   <TableRow>
-                    <TableCell style={{ padding: 0 }} colSpan={4} align="center">Characteristics</TableCell>
+                    <TableCell style={{ padding: 0 }} colSpan={5} align="center">Household Characteristics</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>Nuclear Families</TableCell>
-                    <TableRow>
-                      <TableCell style={{ padding: 0 }} colSpan={3} align="center">Household Members</TableCell>
-                    </TableRow> 
-                    <TableRow>                      
-                      <TableCell>overseas workers</TableCell>
-                      <TableCell>pregnant</TableCell>
-                      <TableCell>disabled</TableCell>
-                    </TableRow> 
+                    <TableCell>Nuclear Families</TableCell>              
+                    <TableCell>overseas workers</TableCell>     
+                    <TableCell>Has Pregnant</TableCell>
+                    <TableCell>Has Solo Parent</TableCell>
+                    <TableCell>Has Disabled</TableCell>
                   </TableRow>
                 </TableCell>
                 <TableCell>
@@ -90,7 +83,7 @@ export const OverviewCbmTableByBrgy = (props) => {
                 </TableCell>
                 <TableCell>
                   <TableRow>
-                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Political Participation</TableCell>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Political</TableCell>
                   </TableRow> 
                   <TableRow>                      
                     <TableCell>Registered voter</TableCell>
@@ -99,30 +92,129 @@ export const OverviewCbmTableByBrgy = (props) => {
                 </TableCell>
                 <TableCell>
                   <TableRow>
-                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Economic Activity</TableCell>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Economic</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>Worked atleast one hour for the past week</TableCell>
-                    <TableCell>Did not work, did have a job or business during the past week</TableCell>
+                    <TableCell>Worked for an hr the past week</TableCell>
+                    <TableCell>Didn't work the past week</TableCell>
+                  </TableRow>
+                </TableCell>
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Health</TableCell>
+                  </TableRow>
+                </TableCell>         
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Crime</TableCell>
+                  </TableRow>  
+                </TableCell>         
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Nutrition</TableCell>
+                  </TableRow>  
+                </TableCell>          
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Sanitation</TableCell>
+                  </TableRow>  
+                </TableCell>           
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Housing</TableCell>
+                  </TableRow>  
+                </TableCell>           
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Waste Management</TableCell>
+                  </TableRow>  
+                </TableCell>           
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Income</TableCell>
+                  </TableRow>  
+                </TableCell>           
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Entrepreneurial</TableCell>
+                  </TableRow>  
+                </TableCell>          
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Agricultural</TableCell>
+                  </TableRow>  
+                </TableCell>      
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Livestock</TableCell>
+                  </TableRow>   
+                </TableCell>      
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Fishing</TableCell>
+                  </TableRow>  
+                </TableCell>       
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Climate</TableCell>
+                  </TableRow>   
+                </TableCell>     
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Hunger</TableCell>
+                  </TableRow>   
+                </TableCell>  
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Deceased</TableCell>
+                  </TableRow>  
+                </TableCell>  
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Programs</TableCell>
+                  </TableRow> 
+                </TableCell>  
+                <TableCell>
+                  <TableRow>
+                    <TableCell sortDirection="desc" style={{ padding: 0 }} colSpan={2} align="center">Date</TableCell>
+                  </TableRow>
+                </TableCell>
+                <TableCell>
+                  <TableRow>
+                    <TableCell style={{ padding: 0 }} colSpan={2} align="center">Status</TableCell>
                   </TableRow>
                 </TableCell>                
-                <TableCell sortDirection="desc">Date</TableCell>
-                <TableCell>Status</TableCell>                
               </TableRow>
             </TableHead>
             <TableBody>
-              {tally.map((rec) => {
+              {tally.map((rec,i) => {
                 const createdAt = format(rec.createdAt, "dd/MM/yyyy");
 
                 return (
                   <TableRow hover key={rec.id}>
+                    <TableCell>{i+1}</TableCell>
                     <TableCell>{rec.ref}</TableCell>
                     <TableCell></TableCell>
-                    <TableCell>{rec.characteristics}</TableCell>
-                    <TableCell>{rec.demography}</TableCell>
-                    <TableCell>{rec.literacy}</TableCell>
-                    <TableCell>{rec.political}</TableCell>
-                    <TableCell>{rec.economic}</TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
+                    <TableCell></TableCell>
                     <TableCell>{createdAt}</TableCell>
                     <TableCell>
                       <SeverityPill color={statusMap[rec.status]}>{rec.status}</SeverityPill>
