@@ -62,13 +62,6 @@ const Page = () => (
             />
           </Grid>
           <Grid xs={12} md={6} lg={4}>
-            <OverviewTraffic
-              chartSeries={[63, 15, 22]}
-              labels={["Desktop", "Tablet", "Phone"]}
-              sx={{ height: "100%" }}
-            />
-          </Grid>
-          <Grid xs={12} md={6} lg={6}>
             <OverviewLatestOrders
               orders={[
                 {
